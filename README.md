@@ -14,10 +14,10 @@ Colorizr is a Ruby gem that consists of a series of color methods like red and l
 
 require 'colorizr' 
 
-puts "John".red
-puts "Paul".green
-puts "George".blue
-puts "Ringo".yellow
+ - puts "John".red
+ - puts "Paul".green
+ - puts "George".blue
+ - puts "Ringo".yellow
 
 That will result in printing the names in the associated color.
 
