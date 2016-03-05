@@ -26,7 +26,7 @@ require 'colorizr'
  - puts "I am black".black
 
 
-That will result in printing the names in the associated color.
+That will result in printing the strings in the associated color.
 
 ###Instalation Instructions
 1. Clone this repo or just download the colorizr-0.0.2.gem file.
