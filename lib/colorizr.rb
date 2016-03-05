@@ -1,6 +1,6 @@
 
 class String
-	@@colors_number = { red: 31,
+	@@color_codes = { red: 31,
 						green: 32,
 						yellow: 33,
 						blue: 34,
@@ -11,9 +11,28 @@ class String
 						black: 30}
 
 	def self.colors
-		colors_list = []
-		colors_list.push(@@colors_number.keys)
-		return colors_list
+		colors = []
+		colors.push(@@color_codes.keys)
+		return colors
 	end
+
+	 def self.create_colors
+    	@@color_codes.each do |color, value|
+      		color_method = %Q{
+        		def #{color}
+          			return "\e[#{value}m" + self + "\e[0m"
+        		end
+      			}
+      class_eval(color_method)
+    end
+  end
+
+	self.create_colors
+
+	def self.sample_colors
+		@@color_codes.each do |color, value|
+			puts "I am #{color}".send(color)
+		end
+	end	
 end
-puts String.colors
+
