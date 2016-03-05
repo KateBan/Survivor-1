@@ -51,4 +51,3 @@ class String
 	end	
 end
 
-puts String.sample_colors
