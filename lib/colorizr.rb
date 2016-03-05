@@ -16,8 +16,8 @@ class String
 		return colors
 	end
     
-    # I experimented with methods to write the create_colors method.
-    # Both class_eval and define_method work.
+    # I implemented two ways to write the create_colors method.
+    # by calling class_eval and define_method work.
     # I am using Method I here,
     # but If you uncomment Method II you can test it too.
 

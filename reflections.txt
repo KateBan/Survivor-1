@@ -1,0 +1,17 @@
+1. How does your gem take advantage of Ruby’s metaprogramming capabilities?
+The Colorizr gem uses "class_eval" to implement the "create_color" method.
+Also, it can use "define_method". The way to test it is to uncomment
+the "create_color" method that implements it.
+To call each of the color methods "sample_colors" method used "send".
+
+2. How long did you spend working on this project?
+About 4 hours.
+
+3. What was the most rewarding challenge you conquered?
+I liked that I was able to use both "class_eval" and "define_method." 
+to achieve the same goal. I feel that I 
+learn more and more about Ruby with every project. That is awesome!
+
+4. Where do you still have room to grow?
+I need to continue practise metaprogramming, try to use the 
+other methods like "method_missing."
