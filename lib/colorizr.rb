@@ -15,7 +15,13 @@ class String
 		colors.push(@@color_codes.keys)
 		return colors
 	end
+    
+    # I experimented with methods to write the create_colors method.
+    # Both class_eval and define_method work.
+    # I am using Method I here,
+    # but If you uncomment Method II you can test it too.
 
+    # Method I with class_eval
 	 def self.create_colors
     	@@color_codes.each do |color, value|
       		color_method = %Q{
@@ -25,7 +31,16 @@ class String
       			}
       class_eval(color_method)
     end
-  end
+    end
+
+    # Method II with define_method
+    # def self.create_colors
+    # 	@@color_codes.each do |color, value|
+    # 		self.send(:define_method, "#{color}") do
+    # 			return "\e[#{value}m" + self + "\e[0m"
+    # 		end
+    # 	end
+    # end
 
 	self.create_colors
 
@@ -36,3 +51,4 @@ class String
 	end	
 end
 
+puts String.sample_colors
