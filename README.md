@@ -10,6 +10,7 @@ Colorizr is a Ruby gem that consists of a series of color methods like red and l
  - white
  - light_grey
  - black
+ 
 ### Example Usage
 
 require 'colorizr' 
