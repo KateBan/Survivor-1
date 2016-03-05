@@ -10,15 +10,21 @@ Colorizr is a Ruby gem that consists of a series of color methods like red and l
  - white
  - light_grey
  - black
- 
+
 ### Example Usage
 
 require 'colorizr' 
 
- - puts "John".red
- - puts "Paul".green
- - puts "George".blue
- - puts "Ringo".yellow
+ - puts "I am red".red
+ - puts "I am green".green
+ - puts "I am yellow".yellow
+ - puts "I am blue".blue
+ - puts "I am pink".pink
+ - puts "I am light_blue".light_blue
+ - puts "I am white".white
+ - puts "I am light_grey".light_grey
+ - puts "I am black".black
+
 
 That will result in printing the names in the associated color.
 
