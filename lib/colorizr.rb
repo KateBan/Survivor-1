@@ -11,9 +11,7 @@ class String
 						black: 30}
 
 	def self.colors
-		colors = []
-		colors.push(@@color_codes.keys)
-		return colors
+		@@color_codes.keys
 	end
     
     # I implemented two ways to write the create_colors method
@@ -26,7 +24,7 @@ class String
     	@@color_codes.each do |color, value|
       		color_method = %Q{
         		def #{color}
-          			return "\e[#{value}m" + self + "\e[0m"
+          			return "\e[#{value}m" + self + "\e[39m"
         		end
       			}
       class_eval(color_method)
